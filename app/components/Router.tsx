@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import { useRouter } from "next/navigation"
+import { useRouter } from "next/navigation";
 
 export default function LoginForm() {
   const router = useRouter();
@@ -11,7 +11,7 @@ export default function LoginForm() {
 
   return (
     <div className="max-w-md mx-auto mt-20 p-6 bg-white rounded-xl shadow">
-      <h1 className="text-2xl font-bold mb-6 text-black"> Kirish </h1>
+      <h1 className="text-2xl font-bold mb-6 text-black">Kirish</h1>
       <button onClick={handleLogin} className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700">
         Kirish
       </button>

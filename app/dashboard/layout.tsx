@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { DASHBOARD_LINKS } from "@/lib/constants";
 
 export default function DashboardLayout({
   children,
@@ -11,15 +12,15 @@ export default function DashboardLayout({
       <aside className="w-64 bg-gray-900 text-white p-6">
         <h2 className="text-xl font-bold mb-8">Dashboard</h2>
         <nav className="flex flex-col gap-2">
-          <Link href="/dashboard" className="text-gray-300 hover:text-white py-2 px-3 rounded hover:bg-gray-800">
-            📊 Umumiy
-          </Link>
-          <Link href="/dashboard/analytics" className="text-gray-300 hover:text-white py-2 px-3 rounded hover:bg-gray-800">
-            📈 Tahlil
-          </Link>
-          <Link href="/dashboard/settings" className="text-gray-300 hover:text-white py-2 px-3 rounded hover:bg-gray-800">
-            ⚙️ Sozlamalar
-          </Link>
+          {DASHBOARD_LINKS.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className="text-gray-300 hover:text-white py-2 px-3 rounded hover:bg-gray-800"
+            >
+              {link.label}
+            </Link>
+          ))}
         </nav>
       </aside>
 

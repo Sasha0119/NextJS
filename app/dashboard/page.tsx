@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Counter from "../components/Counter";
 
 export default function Page() {
   return (
@@ -86,6 +87,12 @@ export default function Page() {
                   </div>
                 </div>
               </Link>
+            </div>
+
+            {/* COUNTER DEMO */}
+            <div className="mt-8">
+              <p className="text-sm text-gray-500 mb-4">Interactive Demo:</p>
+              <Counter />
             </div>
 
             {/* FOOTER */}

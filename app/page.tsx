@@ -1,11 +1,9 @@
-import LoginForm from './components/Roter';
-import Roter from './components/Roter';
+import LoginForm from './components/Router';
 
 export default function Home() {
   return (
     <div>
       <LoginForm />
-      
     </div>
   );
 }
